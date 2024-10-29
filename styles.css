@@ -71,3 +71,41 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin: 1em;
+    }
+
+    .gallery {
+        column-count: 2;
+        column-gap: 5px;
+    }
+
+    .gallery-item {
+        margin-bottom: 5px;
+    }
+
+    .description {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 1em;
+    }
+
+    .gallery {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .gallery-item {
+        margin-bottom: 5px;
+    }
+
+    .description {
+        padding: 5px;
+    }
+}
