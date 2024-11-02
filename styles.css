@@ -80,10 +80,11 @@ footer {
     color: white;
     text-align: center;
     padding: .25em 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     bottom: 0;
 }
+
 
 @media (max-width: 768px) {
     main {
@@ -106,11 +107,13 @@ footer {
     footer {
         padding: 1em;
     }
+}
 
 
 @media (max-width: 480px) {
     header, footer {
         padding: 1em;
+        position: sticky;
     }
 
     .gallery {
