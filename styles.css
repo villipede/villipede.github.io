@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #5064c7;
+    background-color: #647cff;
     color: white; 
     padding: 1em;
 }
@@ -17,12 +17,6 @@ nav {
     align-items: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0 .5em; 
-    margin: 0; 
-}
 
 h1 {
     margin: 0 1em; 
@@ -46,7 +40,7 @@ main {
 .info {
     width: 300px;
     background-color: #428eff46;
-    padding: 3px;
+    padding: 15px;
     position: sticky;
     top: 0;
     height: 80vh;
@@ -55,16 +49,32 @@ main {
     justify-content: flex-start;
 }
 
-.portrait{
-    width: 150px;
-    height: auto;
-    margin: auto 0;
+.portrait {
+    width: 250px; 
+    height: auto; 
+    margin: 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
 }
-.portrait img{
-    height: auto;
-    margin: 35px;
-    width: 150%
+
+.portrait img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 40%;
 }
+
+.portrait a {
+    text-align: center; 
+    color: white;
+    text-decoration: none; 
+    padding: 5px 10px; 
+    background-color: #647cff; 
+    border-radius: 40px; 
+}
+
 
 .gallery {
     flex: 1;
@@ -111,7 +121,7 @@ main {
 }
 
 footer {
-    background-color: #5064c7;
+    background-color: #647cff;
     color: white;
     text-align: center;
     padding: .15em 0;
