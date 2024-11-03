@@ -11,7 +11,8 @@ header {
     background-color: #647cff;
     color: white; 
     padding: 1em;
-    position: ;
+    position: fixed;
+    width: 100%;
 }
 
 nav {
@@ -89,6 +90,7 @@ main {
     column-count: 6;
     column-gap:  10px; 
    margin-left: 330px;
+   margin-top: 2em;
     
 }
 
