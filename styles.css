@@ -3,12 +3,15 @@ body {
     background-color: #00004D;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #647cff;
     color: white; 
     padding: 1em;
+    position: ;
 }
 
 nav {
@@ -32,7 +35,7 @@ main {
 
 .huh{
     display: flex;
-    width: 100%;
+    width: 200%;
     max-width: 2000px;
     margin: 20px auto 20px 0;
 }
@@ -41,11 +44,13 @@ main {
     width: 300px;
     background-color: #428eff46;
     padding: 15px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: 80vh;
+    height: 85vh;
     overflow: auto;
-    
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 4em;
 }
 
 .portrait {
@@ -63,6 +68,7 @@ main {
     width: 100%; 
     height: auto; 
     border-radius: 40%;
+    margin-top: 5em;
 }
 
 .portrait a {
@@ -80,18 +86,20 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     padding: 5px;
-    column-count: 5;
+    column-count: 6;
     column-gap:  10px; 
-   
+   margin-left: 330px;
     
 }
 
 .gallery-item {
+    width: calc(33.333% - 20px);
     width: 100%;
     margin-left: 5px;
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .gallery-item img {
