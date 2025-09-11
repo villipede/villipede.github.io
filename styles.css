@@ -39,11 +39,13 @@ header {
 
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   gap: 2em;
+  padding: 2em;
+  align-items: start;
 }
+
 
 .info-card {
   background-color: rgba(100, 124, 255, 0.2);
@@ -85,23 +87,26 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1em;
-  flex: 3;
 }
 
 .gallery-item {
-    position: relative;
-    background-color: #1a1a66;
-    border: 2px dashed #647cff;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
+  break-inside: avoid;
+  background-color: #1a1a66;
+  border: 2px dashed #647cff;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 3px;
+}
 
-  .gallery-item img {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
-  }
+.gallery-item img {
+  display: block;
+  width: 100%;
+  ;
+  margin: 0;
+  border-radius: 10px;
+}
+
 
 .gallery-item:hover {
   transform: scale(1.05) rotate(-1deg);
