@@ -83,6 +83,54 @@ main {
   margin-top: 1em;
 }
 
+.gremlin-button {
+  background-color: #660000;
+  color: #ffcccc;
+  font-family: 'VT323', monospace;
+  padding: 0.5em 1em;
+  border: 2px dashed #ff3366;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 1em auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.gremlin-button:hover {
+  background-color: #990000;
+}
+
+body.gremlin-mode {
+  background-color: #1a0000;
+  color: #ffcccc;
+}
+
+body.gremlin-mode header {
+  background: linear-gradient(90deg, #660000, #990033);
+  box-shadow: 0 0 15px #ff0033;
+  border-bottom: 2px dashed #ff3366;
+}
+
+body.gremlin-mode .info-card {
+  background-color: rgba(255, 0, 85, 0.2);
+  box-shadow: 0 0 20px #ff3399;
+}
+
+body.gremlin-mode .gallery-item {
+  background-color: #330000;
+  border-color: #ff3366;
+}
+
+body.gremlin-mode .label {
+  background-color: #ff3366;
+  color: #1a0000;
+}
+
+body.gremlin-mode footer {
+  background-color: #990000;
+}
+
+
 .gallery {
   column-count: 3; /* Adjust based on screen size */
   column-gap: 1em;

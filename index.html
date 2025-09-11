@@ -19,6 +19,8 @@
       <p>digital artist, live2D rigger, menace to all</p>
       <h2> Socials</h2>
       <a href="https://x.com/villipede" class="social-button">Twitter</a>
+      <button id="gremlin-toggle" class="gremlin-button">Toggle Gremlin Mode</button>
+
     </aside>
 
     <section class="gallery">
@@ -48,5 +50,12 @@
   <footer>
     <p>©villipede</p>
   </footer>
+  <script>
+  const toggleButton = document.getElementById('gremlin-toggle');
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('gremlin-mode');
+  });
+</script>
+
 </body>
 </html>
