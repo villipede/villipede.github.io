@@ -190,6 +190,42 @@ body.gremlin-mode footer {
   z-index: 2;
 }
 
+@keyframes twitch {
+  0%, 98%, 100% { transform: rotate(0deg); }
+  49% { transform: rotate(2deg); }
+  51% { transform: rotate(-2deg); }
+}
+
+
+body.gremlin-mode .gremlin-gallery .gallery-item img {
+  animation-name: twitch;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+
+body.gremlin-mode .gremlin-gallery .gallery-item:nth-child(1) img {
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+
+body.gremlin-mode .gremlin-gallery .gallery-item:nth-child(2) img {
+  animation-delay: 0.5s;
+  animation-duration: 3.2s;
+}
+
+body.gremlin-mode .gremlin-gallery .gallery-item:nth-child(3) img {
+  animation-delay: 2s;
+  animation-duration: 2.8s;
+}
+
+body.gremlin-mode .gremlin-gallery .gallery-item:nth-child(4) img {
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+
 footer {
   background-color: #647cff;
   text-align: center;
