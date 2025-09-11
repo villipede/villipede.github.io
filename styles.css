@@ -9,13 +9,33 @@ body {
 }
 
 header {
-  background-color: #647cff;
-  text-align: center;
-  padding: 1em;
-  font-size: 2em;
-  color: #fff;
-  box-shadow: 0 0 10px #647cff;
-}
+    background: linear-gradient(90deg, #647cff, #8f9bff);
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 0 15px #647cff;
+    border-bottom: 2px dashed #aaccff;
+  }
+  
+  header h1 {
+    font-family: 'VT323', monospace;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #00004d;
+    letter-spacing: 2px;
+    margin: 0;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
 
 main {
   display: flex;
