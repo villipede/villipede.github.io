@@ -7,7 +7,6 @@ body {
   font-family: 'VT323', monospace;
   color: #fff;
 }
-
 header {
     background: linear-gradient(90deg, #647cff, #8f9bff);
     padding: 1em;
@@ -36,6 +35,8 @@ header {
     font-size: 1.2em;
   }
   
+
+
 
 main {
   display: flex;
