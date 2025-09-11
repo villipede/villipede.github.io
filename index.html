@@ -45,15 +45,35 @@
         <div class="label"> vii's head</div>
       </div>
     </section>
+
+<section class="gallery gremlin-gallery hidden">
+  <div class="gallery-item">
+    <img src="tapeworm.png" alt="tapeworm doodle" />
+    <div class="label">tapeworm girl</div>
+  </div>
+  <div class="gallery-item">
+    <img src="eyeballs.png" alt="sketch of girl with eyes" />
+    <div class="label">eye girl idk</div>
+  </div>
+  <!-- Add more gory pieces here -->
+</section>
+
+    
   </main>
 
   <footer>
     <p>©villipede</p>
   </footer>
-  <script>
+ <script>
   const toggleButton = document.getElementById('gremlin-toggle');
+  const body = document.body;
+  const normalGallery = document.querySelector('.gallery:not(.gremlin-gallery)');
+  const gremlinGallery = document.querySelector('.gremlin-gallery');
+
   toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('gremlin-mode');
+    body.classList.toggle('gremlin-mode');
+    normalGallery.classList.toggle('hidden');
+    gremlinGallery.classList.toggle('hidden');
   });
 </script>
 

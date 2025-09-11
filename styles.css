@@ -130,6 +130,11 @@ body.gremlin-mode footer {
   background-color: #990000;
 }
 
+.hidden {
+  display: none;
+}
+
+
 
 .gallery {
   column-count: 3; /* Adjust based on screen size */
