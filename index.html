@@ -11,20 +11,30 @@
     <h1><span class="icon">👾</span> villipede</h1>
   </header>
 
+ <div id="start-screen">
+   <h1 class="game-title"> Vii's Domain</h1>
+   <p class="press-start">Press ENTER to Start</p>
+ </div> 
+ <div id="menu-screen" style="display:none;">
+  <ul class="menu">
+    <li data-target="contact">Contant me!</li>
+    <li data-target="gallery">gallery</li>
+    <li data-target="mystery">???</li>
+  </ul>
+ </div>
+ <div id="main-content" style="display:none;">
   <main>
-    <aside class="info-card">
-      <h2>about
-      </h2>
+    <aside id="contact" class="info-card" style="display:none;">
+      <h2>about</h2>
       <img src="viiwave.gif" alt="Vii portrait" class="portrait vii-wave" />
-
       <p>digital artist, live2D rigger, menace to all</p>
-      <h2> Socials</h2>
+      <h2>Socials</h2>
       <a href="https://x.com/villipede" class="social-button">Twitter</a>
+      <button class="close-card">X</button>
       <button id="gremlin-toggle" class="gremlin-button">Toggle Gremlin Mode</button>
-
     </aside>
 
-    <section class="gallery">
+    <section id="gallery" style="display:none;">
       <div class="gallery-item">
         <img src="viis dollbox.png" alt="Vii dollbox" />
         <div class="label">my persona, Vii 2024</div>
@@ -66,24 +76,74 @@
   </div>
 </section>
 
-    
+<section id="mystery" style="display:none;">
+<h2> secret</h2>
+ <p> coming soon</p>
+</section>
+ 
+
+
   </main>
 
   <footer>
     <p>©villipede</p>
   </footer>
  <script>
-  const toggleButton = document.getElementById('gremlin-toggle');
-  const body = document.body;
-  const normalGallery = document.querySelector('.gallery:not(.gremlin-gallery)');
-  const gremlinGallery = document.querySelector('.gremlin-gallery');
+  
+window.addEventListener("DOMContentLoaded", () => {
+  const startScreen = document.getElementById("start-screen");
+  const menuScreen = document.getElementById("menu-screen");
+  const mainContent = document.getElementById("main-content");
+  const menuItems = document.querySelectorAll(".menu li");
 
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('gremlin-mode');
-    normalGallery.classList.toggle('hidden');
-    gremlinGallery.classList.toggle('hidden');
+  // Step 1: Start → Menu
+  function showMenu() {
+    startScreen.style.display = "none";
+    menuScreen.style.display = "flex";
+  }
+
+  // Step 2: Menu → Content
+  function showSection(targetId) {
+    menuScreen.style.display = "none";
+    mainContent.style.display = "block";
+
+    // Hide all sections
+    document.querySelectorAll("#main-content aside, #main-content section").forEach(sec => {
+      sec.style.display = "none";
+    });
+
+    // Show chosen section
+    const target = document.getElementById(targetId);
+    if (target) target.style.display = "block";
+  }
+
+  // Trigger menu on Enter or click
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      showMenu();
+    }
   });
+  document.querySelector(".press-start").addEventListener("click", showMenu);
+
+  document.querySelector(".close-card").addEventListener("click", () => {
+  document.getElementById("contact").style.display = "none";
+  menuScreen.style.display = "flex";
+});
+
+
+  // Menu item clicks
+  menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const targetId = item.getAttribute("data-target");
+      showSection(targetId);
+    });
+  });
+});
+
+
 </script>
+  </div>
+  
 
 </body>
 </html>
